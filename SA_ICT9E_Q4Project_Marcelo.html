@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+	<title>Length Conversion Calculator</title>
+
+<style type="text/css">
+	
+	body{
+		padding: 60px;
+		background: url(cmon.jpg);
+	}
+	h1{
+		font-size: 50pt;
+	}
+	button{
+		height: 40px;
+		width: 300px;	
+		font-family: 'Capriola',sans-serif; 
+		color: rosybrown;
+		background-color: white;
+		border-color: lightblue;
+	}
+	input{
+		height: 40px;
+		width: 300px;	
+		font-family: 'Capriola',sans-serif; 
+		font-size: 15pt;
+		color: rosybrown;
+		border-color: lightblue;
+	}
+	label{
+		font-size: 20pt;
+	}
+	p{
+		font-family: 'Capriola',sans-serif; 
+		font-size: 30pt;
+		color: lightskyblue;
+		
+	}
+</style>
+</head>
+<body>
+<h1 style="font-family: 'Capriola', sans-serif; color: rosybrown;" align="center">~ Length Converter ~</h1>
+<br><br>
+<form align="center">
+
+  <label style="font-family: 'Capriola', sans-serif; color: rosybrown;">Input Value</label><br>
+  <input id="inputMill" type="number" placeholder="Millimeters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)"><br><br><br><br>
+<p>Centimeters:&nbsp;&nbsp;&nbsp;<span id="outputCenti"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meters:&nbsp;&nbsp;&nbsp;<span id="outputMeters"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kilometers:&nbsp;&nbsp;&nbsp;<span id="outputKilo"></span>
+
+
+</form>
+
+<script>
+	
+	function LengthConverter(valNum) {
+  document.getElementById("outputCenti").innerHTML=valNum/10;
+  document.getElementById("outputMeters").innerHTML=valNum/1000;
+  document.getElementById("outputKilo").innerHTML=valNum/10000000;
+}
+
+</script>
+
+</body>
+</html>
